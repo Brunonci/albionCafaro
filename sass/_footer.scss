@@ -1,0 +1,15 @@
+footer{
+    padding: 25px;
+    left: 0;
+    bottom: 0;
+    background-color: #AA96DA;
+    text-align: center;
+    font-size: smaller;
+
+    iconFooter{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: end;
+    }
+}

@@ -11,11 +11,11 @@ function registrarUsuario() {
     nombreDeUsuario = prompt("Ingrese un nombre usuario para registrarse");
     contraseña = prompt("Ingrese una contraseña para registrarse");
 }
-  
+
 function loguearse() {
     let logUser = prompt("Introduzca su usuario para loguearse");
     let logContraseña = prompt("Introduzca su contraseña para loguearse");
-  
+
     if (logUser === nombreDeUsuario && logContraseña === contraseña) {
         alert("Bienvenido " + nombreDeUsuario + " Ya pudes usar la calculadora");
     } else {
@@ -29,7 +29,6 @@ function loguearse() {
     }
 }
 
-
 function craftearPocionVeneno() {
     item1 = prompt("Introduzca el precio de Crenellated Burdock:");
     item2 = prompt("Introduzca el precio de Brightleaf Comfrey:");
@@ -42,8 +41,6 @@ function craftearPocionVeneno() {
     retorno = costo * retorno;
 
     alert("El costo de la pocion de veneno es: " + costo + " con un retorno de: " + retorno);
-
-
 }
 
 registrarUsuario();

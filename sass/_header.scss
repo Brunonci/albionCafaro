@@ -1,0 +1,27 @@
+header{
+    background-color: #AA96DA;
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index:100;
+    nav{
+        padding-left: 0;
+        margin-bottom: 0;
+        ul{
+            margin: 0;
+            li{
+                padding: 10px 10px;
+                display: inline-block;
+                a{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 500;
+                    font-size: large;
+                    color: #0c056d;
+                }
+            }
+        }
+    }
+}
