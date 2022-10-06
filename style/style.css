@@ -64,39 +64,29 @@ footer iconFooter {
 .galeria {
   margin-top: 20px;
 }
-.galeria .screenshot {
+.galeria .textoGaleria {
+  text-align: center;
+  margin: 50px 350px;
+  padding: 20px;
+  border: 2px solid #4b9978;
+  background-color: #61c79c;
+}
+.galeria .wallpaper {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
+  gap: 50px;
+  margin-top: 50px;
 }
-.galeria .screenshot .screenshot-grid {
+.galeria .wallpaper .wallpaper-grid {
   width: 80%;
   margin: 20px auto 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 10px;
 }
-.galeria .screenshot .screenshot-grid img {
-  width: 100%;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.wallpaper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-.wallpaper .wallpaper-grid {
-  width: 80%;
-  margin: 20px auto 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 10px;
-}
-.wallpaper .wallpaper-grid img {
+.galeria .wallpaper .wallpaper-grid img {
   width: 100%;
   cursor: pointer;
   transition: 0.4s;
