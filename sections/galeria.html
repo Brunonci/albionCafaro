@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/style.css">
+
+    <title>Albion Calculadora</title>
+
+    <meta name="author" content="Bruno">
+    <meta name="copyrigth" content="">
+    <meta name="description" content="Este sitio es una Fan Page del videojuego -Albion Online-">
+    <meta name="keywords" content="Videojuegos, Albion Online, MMO, Craft, Tools">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bgNav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img src="../images/header/logo sin fondo original 200px.png" alt="Logo de Albion Online" class="logo" width=""></a>
+                <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse nav" id="navbarNav">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./albion.html">Albion</a></li>
+                        <li><a href="./craft.html">Craft de armas</a></li>
+                        <li><a href="./refinador.html">Refinador</a></li>
+                        <li><a href="./galeria.html">Galeria</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+
+
+    <div class="galeria">
+        <div class="screenshot">
+            <h1>Screenshot</h1>
+            <div class="full-img" id="fullImgBox">
+                <img src="../images/galeria/screenshot/screen01.jpg" id="fullImg">
+                <span onclick="closeFullImg()">X</span>
+            </div>
+            <div class="screenshot-grid">
+                <img src="../images/galeria/screenshot/screen01.jpg" alt="Screenshot de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/screenshot/screen02.jpg" alt="Screenshot de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/screenshot/screen03.jpg" alt="Screenshot de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/screenshot/screen04.jpg" alt="Screenshot de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/screenshot/screen05.jpg" alt="Screenshot de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/screenshot/screen06.jpg" alt="Screenshot de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy"> 
+                <img src="../images/galeria/screenshot/screen07.jpg" alt="Screenshot de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/screenshot/screen08.jpg" alt="Screenshot de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/screenshot/screen09.jpg" alt="Screenshot de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/screenshot/screen10.jpg" alt="Screenshot de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/screenshot/screen11.jpg" alt="Screenshot de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/screenshot/screen12.jpg" alt="Screenshot de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+            </div>
+        </div>
+        <div class="wallpaper">
+            <h1>Wallpaper</h1>
+            <div class="full-img" id="fullImgBox">
+                <img src="../images/galeria/screenshot/screen01.jpg" id="fullImg">
+                <span onclick="closeFullImg()">X</span>
+            </div>
+            <div class="wallpaper-grid">
+                <img src="../images/galeria/wallpaper/screen13.jpg" alt="Wallpaper de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/wallpaper/screen14.jpg" alt="Wallpaper de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/wallpaper/screen15.jpg" alt="Wallpaper de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/wallpaper/screen16.jpg" alt="Wallpaper de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/wallpaper/screen17.jpg" alt="Wallpaper de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+                <img src="../images/galeria/wallpaper/screen18.jpg" alt="Wallpaper de Slime Rancher" onclick="openFullImg(this.src)" loading="lazy">
+            </div>
+        </div>
+    </div> 
+
+
+
+    <!-- pie de pagina -->
+    <footer id="footer">
+        <h3>© Copyright 2022 - Albion Online Tools</h3>
+        <!--Iconos-->
+        <div class="iconFooter">
+            <img src="../images/footer/icons8-facebook-50.png" alt="Icono de facebook">
+            <img src="../images/footer/icons8-linkedin-50.png" alt="Icono de linkedin">
+            <img src="../images/footer/icons8-angry-face-meme-50.png" alt="Icono de meme cara enojada">
+        </div>
+    </footer>
+
+    <script src="/js/galeria.js"></script>
+    <!--  <script src="/js/main.js"></script>  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

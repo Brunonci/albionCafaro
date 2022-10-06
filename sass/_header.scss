@@ -3,7 +3,6 @@ header{
     position: sticky;
     top: 0;
     left: 0;
-    padding: 20px;
     z-index:100;
     nav{
         padding-left: 0;
@@ -24,4 +23,11 @@ header{
             }
         }
     }
+}
+
+container-fluid{
+    display: flex;
+}
+.navbar-collapse{
+    flex-grow: 0;
 }
