@@ -29,7 +29,7 @@
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="./albion.html">Albion</a></li>
-                        <li><a href="./craft.html">Craft de armas</a></li>
+                        <li><a href="./craft.html">Crafteo</a></li>
                         <li><a href="./refinador.html">Refinador</a></li>
                         <li><a href="./galeria.html">Galeria</a></li>
                     </ul>
@@ -39,6 +39,102 @@
         </nav>
     </header>
 
+
+
+    <div class="selecionCraft">
+        <h1>Crafteo</h1>
+        <p>Seleciona el item a craftear: </p>
+        <div class="items">
+            <a href="" id="" onclick=""><img src="" alt=""></a>
+            <a href="" id="" onclick=""><img src="" alt=""></a>
+            <a href="" id="" onclick=""><img src="" alt=""></a>
+            <a href="" id="" onclick=""><img src="" alt=""></a>
+            <a href="" id="" onclick=""><img src="" alt=""></a>
+        </div>
+        
+    </div>
+    <div class="linea"></div>
+
+
+    <div class="craft">
+        <div class="card">
+            <div class="cardHeader" type="button" onclick="cardExpand1Display()">
+                <h6 class="cardHeaderText">Selecionar ciudad: <span class="selecionCuidad">prueba</span></h6>
+            </div>
+            <div class="cardExpand" id="cardExpand1">
+                <a class="btn btn-sm btnCarleon" onclick="refinatorBtnCarleon()" >Carleon</a>
+                <a class="btn btn-lg btnBridgewatch" onclick="refinatorBtn()">Bridgewatch</a>
+                <a class="btn btn-sm btnFortsterling" onclick="refinatorBtn()">Fortsterling</a>
+                <a class="btn btn-sm btnLymhurst" onclick="refinatorBtn()">Lymhurst</a>
+                <a class="btn btn-sm btnMartlock" onclick="refinatorBtn()">Martlock</a>
+                <a class="btn btn-sm btnThetford" onclick="refinatorBtn()">Thetford</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardHeader" type="button" onclick="cardExpand2Display()">
+                <h6 class="cardHeaderText">Item a craftear: </h6>
+            </div>
+            <div class="cardExpand" id="cardExpand2">
+                <div class="infoMaterial">
+                    <img src="../images/craft/potion/veneno/T4_POTION_COOLDOWN.png" width="100px" height="100px" alt="">
+                    <p id="cantItem" class="numInfo">5</p>
+                    <h6 id="nombreItem" class="nombreMaterial">Poción de veneno menor</h6>
+                    <input id="precioItem" class="form-control" value="700" type="number" oninput="precioTotal()">
+                    <p id="precioTotalItem">2000</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardHeader" type="button" onclick="cardExpand3Display()">
+                <h6 class="cardHeaderText">Materiales y costo: </h6>
+            </div>
+            <div class="cardExpand" id="cardExpand3">
+                <div class="infoMaterial">
+                    <img src="../images/craft/productos/T4_BURDOCK.png" width="100px" height="100px" alt="">
+                    <p id="cantMaterial1" class="numInfo">8</p>
+                    <h6 id="nombreMaterial1" class="nombreMaterial">Bardana almenada</h6>
+                    <input id="precioMaterial1" class="form-control" value="390" type="number" oninput="precioTotalM1()">
+                    <p id="precioTotalMaterial1">3120</p>
+                </div>
+                <div class="linea"></div>
+                <div class="infoMaterial">
+                    <img src="../images/craft/productos/T3_COMFREY.png" width="100px" height="100px" alt="">
+                    <p id="cantMaterial2" class="numInfo">4</p>
+                    <h6 id="nombreMaterial2" class="nombreMaterial">Consuelda hojabrillante</h6>
+                    <input id="precioMaterial2" class="form-control" value="350" type="number" oninput="precioTotalM2()">
+                    <p id="precioTotalMaterial2">1400</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cardHeader" type="button" onclick="cardExpand4Display()">
+                <h6 class="cardHeaderText">Customización</h6>
+            </div>
+            <div class="cardExpand custom" id="cardExpand4">
+                <div class="customData">
+                    <h6>Tarifa de uso <p class="tChico">-- de la estación de elaboración</p></h6>
+                    <input type="number" class="form-control">
+                    <span class="input-group-text">%</span>
+                </div>
+                <div class="customData">
+                    <h6>Tasa de retorno <p class="tChico">-- sin foco</p></h6>
+                    <input type="number" class="form-control">
+                    <span class="input-group-text">%</span>
+                </div>
+                <div class="customData">
+                    <h6>Tasa de retorno <p class="tChico">-- con foco</p></h6>
+                    <div>
+                        <input type="number" class="form-control">
+                        <span class="input-group-text">%</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <!-- pie de pagina -->
     <footer id="footer">
@@ -51,7 +147,7 @@
         </div>
     </footer>
 
-    <script src="/js/galeria.js"></script>
+    <script src="/js/craft.js"></script>
     <!--  <script src="/js/main.js"></script>  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>

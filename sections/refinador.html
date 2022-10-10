@@ -29,7 +29,7 @@
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="./albion.html">Albion</a></li>
-                        <li><a href="./craft.html">Craft de armas</a></li>
+                        <li><a href="./craft.html">Crafteo</a></li>
                         <li><a href="./refinador.html">Refinador</a></li>
                         <li><a href="./galeria.html">Galeria</a></li>
                     </ul>
@@ -39,6 +39,60 @@
         </nav>
     </header>
 
+    <div class="selecionRefinator">
+        <h1>Refinador</h1>
+        <p>Seleciona el material a refinar: </p>
+        <div class="materiales">
+            <a href="" id="selecCuero" onclick=""><img src="../images/Refinador/Materiales/Hide/T2_HIDE.png" alt="">Cuero</a>
+            <a href="" id="selecMineral" onclick=""><img src="../images/Refinador/Materiales/Ore/T2_ORE.png" alt="">Mineral</a>
+            <a href="" id="selecMadera" onclick=""><img src="../images/Refinador/Materiales/Wood/T2_WOOD.png" alt="">Madera</a>
+            <a href="" id="selecFibra" onclick=""><img src="../images/Refinador/Materiales/Fiber/T2_FIBER.png" alt="">Fibra</a>
+            <a href="" id="selecPiedra" onclick=""><img src="../images/Refinador/Materiales/Rock/T2_ROCK.png" alt="">Piedra</a>
+        </div>
+    </div>
+    
+
+
+    <div class="refinador">
+        <div class="card">
+            <div class="cardHeader" type="button" onclick="cardExpand1Display()">
+                <h6 class="cardHeaderText">Selecionar ciudad: <span class="selecionCuidad">prueba</span></h6>
+            </div>
+            <div class="cardExpand" id="cardExpand1">
+                <a class="btn btn-sm btnCarleon" onclick="refinatorBtnCarleon()" >Carleon</a>
+                <a class="btn btn-lg btnBridgewatch" onclick="refinatorBtn()">Bridgewatch</a>
+                <a class="btn btn-sm btnFortsterling" onclick="refinatorBtn()">Fortsterling</a>
+                <a class="btn btn-sm btnLymhurst" onclick="refinatorBtn()">Lymhurst</a>
+                <a class="btn btn-sm btnMartlock" onclick="refinatorBtn()">Martlock</a>
+                <a class="btn btn-sm btnThetford" onclick="refinatorBtn()">Thetford</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="cardHeader" type="button" onclick="cardExpand2Display()">
+                <h6 class="cardHeaderText">Material a refinar: </h6>
+            </div>
+            <div class="cardExpand" id="cardExpand2">
+                <img src="../images/Refinador/Materiales/Hide/T4_HIDE.png" width="150px" height="150px" alt="">
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="cardHeader" type="button" onclick="cardExpand3Display()">
+                <h6 class="cardHeaderText">Materiales y costo: </h6>
+            </div>
+            <div class="cardExpand" id="cardExpand3">
+                <div class="infoMaterial">
+                    <img src="../images/refinador/Materiales/Hide/T4_HIDE.png" alt="">
+                </div>
+                <div class="linea"></div>
+                <div class="infoMaterial">
+                    <img src="" alt="">
+                </div>
+            </div>
+        
+    </div>
 
     <!-- pie de pagina -->
     <footer id="footer">
@@ -51,7 +105,7 @@
         </div>
     </footer>
 
-    <script src="/js/galeria.js"></script>
+    <script src="/js/refinador.js"></script>
     <!--  <script src="/js/main.js"></script>  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>

@@ -10,6 +10,22 @@ body {
   font-weight: 300;
 }
 
+.linea {
+  border-top: 2px solid #AA96DA;
+  height: 2px;
+  padding: 0;
+  margin: 20px;
+  width: auto;
+}
+
+p {
+  margin: 0;
+}
+
+h6 {
+  margin: 0;
+}
+
 header {
   background-color: #AA96DA;
   position: -webkit-sticky;
@@ -59,6 +75,204 @@ footer iconFooter {
   flex-direction: row;
   justify-content: center;
   align-items: end;
+}
+
+.selecionCraft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.selecionCraft .items {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.selecionCraft .items a {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.craft {
+  margin: 50px;
+}
+.craft .card {
+  position: relative;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #e3e6f0;
+  border-radius: 0.35rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.craft .card .cardHeader {
+  margin-bottom: 0;
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+  padding: 0.75rem 3.25rem 0.75rem 1.25rem;
+  border-left: 0.25rem solid #1cc88a !important;
+}
+.craft .card .cardHeader .cardHeaderText {
+  color: #4e73df;
+}
+.craft .card .cardExpand {
+  padding: 0.75rem 1.25rem 0.75rem 1.25rem;
+}
+.craft .card .cardExpand .btnCarleon {
+  color: #fff;
+  background-color: #858796;
+  border-color: #70717e;
+}
+.craft .card .cardExpand .btnBridgewatch {
+  color: #fff;
+  background-color: #f6c23e;
+  border-color: #ca9f32;
+}
+.craft .card .cardExpand .btnFortsterling {
+  color: #3a3b45;
+  background-color: #f8f9fc;
+  border-color: #c0c1c2;
+}
+.craft .card .cardExpand .btnLymhurst {
+  color: #fff;
+  background-color: #1cc88a;
+  border-color: #12855a;
+}
+.craft .card .cardExpand .btnMartlock {
+  color: #fff;
+  background-color: #36b9cc;
+  border-color: #21717e;
+}
+.craft .card .cardExpand .btnThetford {
+  color: #ffffff;
+  background-color: #611BBD;
+  border-color: #130269;
+}
+
+.infoMaterial {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.infoMaterial .nombreMaterial {
+  color: #000000;
+  width: 300px;
+}
+.infoMaterial .numInfo {
+  padding: 5px 10px;
+  color: white;
+  background-color: #5ac4eb;
+  border-radius: 5px;
+}
+.infoMaterial input {
+  width: 150px;
+}
+
+.custom .customData {
+  display: flex;
+  flex-direction: row;
+}
+.custom .customData input {
+  margin-left: 50px;
+  width: 150px;
+  height: 40px;
+}
+.custom .customData span {
+  height: 40px;
+}
+
+.tChico {
+  font-weight: 300;
+  font-size: smaller;
+}
+
+.selecionRefinator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.selecionRefinator .materiales {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.selecionRefinator .materiales a {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.refinador {
+  margin: 50px;
+}
+.refinador .card {
+  position: relative;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #e3e6f0;
+  border-radius: 0.35rem;
+  width: 60%;
+  height: 60%;
+}
+.refinador .card .cardHeader {
+  margin-bottom: 0;
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+  padding: 0.75rem 3.25rem 0.75rem 1.25rem;
+  border-left: 0.25rem solid #1cc88a !important;
+}
+.refinador .card .cardHeader .cardHeaderText {
+  color: #4e73df;
+}
+.refinador .card .cardExpand {
+  padding: 0.75rem 1.25rem 0.75rem 1.25rem;
+}
+.refinador .card .cardExpand .btnCarleon {
+  color: #fff;
+  background-color: #858796;
+  border-color: #70717e;
+}
+.refinador .card .cardExpand .btnBridgewatch {
+  color: #fff;
+  background-color: #f6c23e;
+  border-color: #ca9f32;
+}
+.refinador .card .cardExpand .btnFortsterling {
+  color: #3a3b45;
+  background-color: #f8f9fc;
+  border-color: #c0c1c2;
+}
+.refinador .card .cardExpand .btnLymhurst {
+  color: #fff;
+  background-color: #1cc88a;
+  border-color: #12855a;
+}
+.refinador .card .cardExpand .btnMartlock {
+  color: #fff;
+  background-color: #36b9cc;
+  border-color: #21717e;
+}
+.refinador .card .cardExpand .btnThetford {
+  color: #ffffff;
+  background-color: #611BBD;
+  border-color: #130269;
 }
 
 .galeria {
