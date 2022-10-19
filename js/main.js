@@ -29,20 +29,9 @@ function loguearse() {
     }
 }
 
-function craftearPocionVeneno() {
-    item1 = prompt("Introduzca el precio de Crenellated Burdock:");
-    item2 = prompt("Introduzca el precio de Brightleaf Comfrey:");
-    tax = prompt("Introduzca el precio del impuesto:");
-    retorno = prompt("Introduzca la cantidad de retorno con un punto delante");
 
-    item1 = item1 * 8;
-    item2 = item2 * 4;
-    costo = item1 + item2 + tax;
-    retorno = costo * retorno;
 
-    alert("El costo de la pocion de veneno es: " + costo + " con un retorno de: " + retorno);
-}
+
 
 registrarUsuario();
 loguearse();
-craftearPocionVeneno();

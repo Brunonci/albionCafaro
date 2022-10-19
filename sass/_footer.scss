@@ -4,12 +4,18 @@ footer{
     bottom: 0;
     background-color: #AA96DA;
     text-align: center;
-    font-size: smaller;
-
-    iconFooter{
+    h3{
+        font-size: smaller;
+    }
+    .iconFooter{
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: end;
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        
     }
 }

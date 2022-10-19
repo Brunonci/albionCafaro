@@ -18,10 +18,20 @@
 }
 
 .craft{
-    margin: 50px;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 41% 30% 25%;
+    grid-template-rows: auto auto auto;
+    margin: 20px;
+    gap: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "city tier ."
+        "item . ."
+        "material custom price";
+
     .card{
         position: relative;
-        margin: 30px;
         display: flex;
         flex-direction: column;
 
@@ -30,8 +40,7 @@
         border: 1px solid #e3e6f0;
         border-radius: 0.35rem;
 
-        width: fit-content;
-        height: fit-content;
+        
 
         .cardHeader{
             margin-bottom: 0;
@@ -86,6 +95,9 @@
     gap: 20px;
     align-items: center;
     justify-content: space-between;
+    img{
+        width: 20%;
+    }
     .nombreMaterial{
         color: #000000;
         width: 300px;
@@ -105,20 +117,89 @@
     .customData{
         display: flex;
         flex-direction: row;
-        
-        input{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        .inputCustom{
             margin-left: 50px;
             width: 150px;
             height: 40px;
         }
         span{
             height: 40px;
+            width: 40px;
         }
     }
     
 }
 
+table.tabla {
+    background-color: #EEEEEE;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+table.tabla td, table.tabla th {
+    padding: 1px 1px;
+}
+table.tabla tbody td {
+    font-size: 13px;
+    color: #6B6B6B;
+}
+table.tabla thead {
+    background-color: #4e73df;
+}
+table.tabla thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+}
+table.tabla thead th:first-child {
+    border-left: none;
+}
+
+table.tabla tfoot td {
+    font-size: 14px;
+}
+table.tabla tfoot .links {
+    text-align: right;
+}
+table.tabla tfoot .links a{
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+table.tabla tr:nth-child(even) {
+    background: #ffffff;
+}
+
+table.tabla tfoot {
+    background: #ffffff;
+}
+
+
 .tChico{
     font-weight: 300;
     font-size: smaller;
 }
+
+.tierImg{
+    width: 20%;
+    height: 20%;
+}
+
+
+.city { grid-area: city; }
+
+.tier { grid-area: tier; }
+
+.item { grid-area: item; }
+
+.material { grid-area: material; }
+
+.custom { grid-area: custom; }
+
+.price { grid-area: price; }
