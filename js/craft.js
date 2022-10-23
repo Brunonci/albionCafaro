@@ -47,7 +47,6 @@ function cardExpand6Display() {
     }
 }
 
-
 function refinatorBtnCarleon() {
     const element = document.getElementById("btnCarleon");
     element.classList.remove("btn-sm");
@@ -188,8 +187,6 @@ function precioTotal(){
     let total = cant * precio 
     document.getElementById("precioTotalItem").innerHTML = total;
 }
-
-
 function precioTotalM1(){
     let cant1 = parseInt(document.getElementById("cantMaterial1").innerText, 10);
     let precio1 = parseInt(document.getElementById("precioMaterial1").value, 10);
@@ -202,14 +199,11 @@ function precioTotalM2(){
     let total2 = cant2 * precio2 
     document.getElementById("precioTotalMaterial2").innerHTML = total2;
 }
-
-
 function customTarifa(){
     let tarifa = parseInt(document.getElementById("inputTarifa").value, 10);
     let tarifaTotal = (tarifa / 100) * 2400
     document.getElementById("tarifaUso").innerHTML = tarifaTotal;
     document.getElementById("tarifaUso1").innerHTML = tarifaTotal;
-
 }
 function costoMateriales(){
     let total1 = parseInt(document.getElementById("precioTotalMaterial1").innerText, 10);
@@ -217,5 +211,104 @@ function costoMateriales(){
     let total = total1 + total2
     document.getElementById("costoMateriales").innerHTML = total;
     document.getElementById("costoMateriales1").innerHTML = total;
+}
+function retornoMateriales(){
+    //sin foco
+    let tarifaUso = parseInt(document.getElementById("tarifaUso").innerText, 10);
+    let costoMateriales = parseInt(document.getElementById("costoMateriales").innerText, 10);
+    let tasaSinFoco = parseInt(document.getElementById("retornoSinFoco").value, 10);
+    let tasaSinFocoPorcentaje = tasaSinFoco / 100
+    let suma = tasaSinFocoPorcentaje
+    let totalRetorno = tasaSinFocoPorcentaje
+    for (let count = 0; count < 5; count++){
+        suma = suma * tasaSinFocoPorcentaje
+        totalRetorno = totalRetorno + suma
+    }
+    let retornoMaterialesSinFoco = costoMateriales * totalRetorno
+    document.getElementById("retornoSinFocoTotal").innerHTML = retornoMaterialesSinFoco.toFixed(0);
+
+    //con foco
+    let tarifaUso1 = parseInt(document.getElementById("tarifaUso1").innerText, 10);
+    let tasaConFoco = parseInt(document.getElementById("retornoConFoco").value, 10);
+    let tasaConFocoPorcentaje = tasaConFoco / 100
+    let suma1 = tasaConFocoPorcentaje
+    let totalRetorno1 = tasaConFocoPorcentaje
+    for (let count = 0; count < 5; count++){
+        suma1 = suma1 * tasaConFocoPorcentaje
+        totalRetorno1 = totalRetorno1 + suma1
+    }
+    let retornoMaterialesConFoco = costoMateriales * totalRetorno1
+    document.getElementById("retornoConFocoTotal").innerHTML = retornoMaterialesConFoco.toFixed(0);
+}
+
+
+function costoTotal(){
+    let precioItem = parseInt(document.getElementById("precioItem").value, 10);
+    let costoMateriales = parseInt(document.getElementById("costoMateriales").innerText, 10);
+    let retornoSinFocoTotal = parseInt(document.getElementById("retornoSinFocoTotal").innerText, 10);
+    let retornoConFocoTotal = parseInt(document.getElementById("retornoConFocoTotal").innerText, 10);
+    let tarifaUso = parseInt(document.getElementById("tarifaUso").innerText, 10);
+    let tarifaUso1 = parseInt(document.getElementById("tarifaUso1").innerText, 10);
+
+    let costoTotalSinFoco = tarifaUso + costoMateriales - retornoSinFocoTotal
+    let costoTotalConFoco = tarifaUso1 + costoMateriales - retornoConFocoTotal
+
+
+
+    document.getElementById("finalTotalSinFoco").innerHTML = costoTotalSinFoco.toFixed(0);
+    document.getElementById("finalTotalConFoco").innerHTML = costoTotalConFoco.toFixed(0);
+
+
+    console.log=(costoTotalSinFoco)
+    console.log=(precioItem)
+
+    if(costoTotalSinFoco < precioItem){
+        const finalTotalSinFoco = document.getElementById("finalTotalSinFoco");
+        finalTotalSinFoco.setAttribute("class", "btn btn-success mt-4");
+    }else{
+        const finalTotalSinFoco = document.getElementById("finalTotalSinFoco");
+        finalTotalSinFoco.setAttribute("class", "btn btn-danger mt-4");
+    }
+
+    if(costoTotalConFoco < precioItem){
+        const finalTotalConFoco = document.getElementById("finalTotalConFoco");
+        finalTotalConFoco.setAttribute("class", "btn btn-success mt-4");
+    }else{
+        const finalTotalConFoco = document.getElementById("finalTotalConFoco");
+        finalTotalConFoco.setAttribute("class", "btn btn-danger mt-4");
+    }
+
 
 }
+
+
+/*
+function TotalSummaryFocus(newPrice, TotalSum_MatReturnedFocus) {
+    var UFTFormattedFocus = document.getElementsByClassName("UsageFeeTotal")[1]
+        .innerHTML;
+    var UsageFeeTotalFocus = UFTFormattedFocus.replace(",", "");
+
+    document.getElementById("allTotalwFocus").innerHTML = nf.format(
+        parseInt(+UsageFeeTotalFocus + +newPrice - +TotalSum_MatReturnedFocus)
+    );
+
+    var TotalSumFocus = parseInt(
+        +UsageFeeTotalFocus + +newPrice - +TotalSum_MatReturnedFocus
+    );
+    var itemToCraft = document
+        .getElementById("itemprice")
+        .getAttribute("data-itemprice");
+    var itemVsMat = PercDiff(itemToCraft, TotalSumFocus);
+    if (itemVsMat < 0) {
+        var ProfitwFocusClass = "danger";
+    } else if (itemVsMat < 10) {
+        var ProfitwFocusClass = "warning";
+    } else if (itemVsMat > 10) {
+        var ProfitwFocusClass = "success";
+    }
+
+    document
+        .getElementById("allTotalwFocus")
+        .setAttribute("class", "btn btn-" + ProfitwFocusClass + " mt-4");
+}
+*/

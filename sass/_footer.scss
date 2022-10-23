@@ -4,6 +4,17 @@ footer{
     bottom: 0;
     background-color: #AA96DA;
     text-align: center;
+    body.dark & {
+        background: #222222;
+        box-shadow: 10px 10px 20px rgba(170,170,170,.16);
+        a {
+            color: #C8C8C8;
+            &:hover {
+                color: #FEFEFE;
+            }
+        }
+        
+    }
     h3{
         font-size: smaller;
     }

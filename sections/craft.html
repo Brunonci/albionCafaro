@@ -7,6 +7,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="/style/style.css">
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
     <title>Albion Calculadora</title>
 
@@ -33,6 +34,10 @@
                         <li><a href="./refinador.html">Refinador</a></li>
                         <li><a href="./galeria.html">Galeria</a></li>
                     </ul>
+                    <button class="tema" id="tema">
+                        <span><i class="fas fa-sun"></i></span>
+                        <span><i class="fas fa-moon"></i></span>
+                    </button>
                 </div>
             </div>
             
@@ -57,7 +62,6 @@
 
 
     <div class="craft">
-
         <div class="card city">
             <div class="cardHeader" type="button" onclick="cardExpand1Display()" >
                 <h6 class="cardHeaderText">Selecionar ciudad: <span class="selecionCuidad" id="selecionCuidad">...</span></h6>
@@ -80,8 +84,8 @@
                     <img src="../images/craft/potion/veneno/T4_POTION_COOLDOWN.png" alt="">
                     <p id="cantItem" class="numInfo">5</p>
                     <h6 id="nombreItem" class="nombreMaterial">Poción de veneno menor</h6>
-                    <input id="precioItem" class="form-control" value="700" type="number" oninput="precioTotal()">
-                    <p id="precioTotalItem">2000</p>
+                    <input id="precioItem" class="form-control" value="700" type="number" oninput="precioTotal(), costoTotal()">
+                    <p id="precioTotalItem">3500</p>
                 </div>
                 
             </div>
@@ -96,7 +100,7 @@
                     <img src="../images/craft/productos/T4_BURDOCK.png" alt="">
                     <p id="cantMaterial1" class="numInfo">8</p>
                     <h6 id="nombreMaterial1" class="nombreMaterial">Bardana almenada</h6>
-                    <input id="precioMaterial1" class="form-control" value="390" type="number" oninput="precioTotalM1(), costoMateriales()">
+                    <input id="precioMaterial1" class="form-control" value="390" type="number" oninput="precioTotalM1(), costoMateriales(), costoTotal()">
                     <p id="precioTotalMaterial1">3120</p>
                 </div>
                 <div class="linea"></div>
@@ -104,7 +108,7 @@
                     <img src="../images/craft/productos/T3_COMFREY.png" alt="">
                     <p id="cantMaterial2" class="numInfo">4</p>
                     <h6 id="nombreMaterial2" class="nombreMaterial">Consuelda hojabrillante</h6>
-                    <input id="precioMaterial2" class="form-control" value="350" type="number" oninput="precioTotalM2(), costoMateriales()">
+                    <input id="precioMaterial2" class="form-control" value="350" type="number" oninput="precioTotalM2(), costoMateriales(), costoTotal()">
                     <p id="precioTotalMaterial2">1400</p>
                 </div>
             </div>
@@ -118,21 +122,21 @@
                 <div class="customData">
                     <h6>Tarifa de uso <p class="tChico">-- de elaboración</p></h6>
                     <div class="d-flex flex-row flex-nowrap">
-                        <input value="50" type="number" class="form-control inputCustom" id="inputTarifa" oninput="customTarifa()">
+                        <input value="30" type="number" class="form-control inputCustom" id="inputTarifa" oninput="customTarifa(), costoTotal()">
                         <span class="input-group-text">%</span>
                     </div>
                 </div>
                 <div class="customData">
                     <h6>Tasa de retorno <p class="tChico">-- sin foco</p></h6>
                     <div class="d-flex flex-row flex-nowrap">
-                        <input value="15" type="number" class="form-control inputCustom" id="retornoSinFoco">
+                        <input value="15" type="number" class="form-control inputCustom" id="retornoSinFoco" oninput="retornoMateriales(), costoTotal()">
                         <span class="input-group-text">%</span>
                     </div>
                 </div>
                 <div class="customData">
                     <h6>Tasa de retorno <p class="tChico">-- con foco</p></h6>
                     <div class="d-flex flex-row flex-nowrap">
-                        <input value="44" type="number" class="form-control inputCustom">
+                        <input value="44" type="number" class="form-control inputCustom" id="retornoConFoco" oninput="retornoMateriales(), costoTotal()">
                         <span class="input-group-text">%</span>
                     </div>
                     
@@ -167,8 +171,8 @@
                     <tbody>
                         <tr>
                             <td>Tarifa de uso</td>
-                            <td id="tarifaUso">1200</td>
-                            <td id="tarifaUso1">1200</td>
+                            <td id="tarifaUso">720</td>
+                            <td id="tarifaUso1">720</td>
                         </tr>
                         <tr>
                             <td>Costo de materiales</td>
@@ -177,21 +181,18 @@
                         </tr>
                         <tr>
                             <td>Retorno de materiales</td>
-                            <td id="retornoSinFoco">1111</td>
-                            <td id="retornoConFoco1">1111</td>
+                            <td id="retornoSinFocoTotal">798</td>
+                            <td id="retornoConFocoTotal">1989</td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td><p class="btn btn-secondary mt-4">Total cost</p></td>
-                            <td><p class="btn btn-danger mt-4" id="allTotalwoFocus">6126</p></td>
-                            <td><p class="btn btn-danger mt-4" id="allTotalwFocus">4855</p></td>
+                            <td><p class="btn btn-secondary mt-4">Costo total x item</p></td>
+                            <td><p class="btn btn-danger mt-4" id="finalTotalSinFoco">4442</p></td>
+                            <td><p class="btn btn-danger mt-4" id="finalTotalConFoco">3251</p></td>
                         </tr>
                     </tfoot>
                 </table>
-
-
-
             </div>
         </div>
     </div>
@@ -207,8 +208,8 @@
         </div>
     </footer>
 
+    <script src="/js/main.js"></script>
     <script src="/js/craft.js"></script>
-    <!--  <script src="/js/main.js"></script>  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>

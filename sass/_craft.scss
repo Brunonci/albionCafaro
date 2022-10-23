@@ -34,14 +34,14 @@
         position: relative;
         display: flex;
         flex-direction: column;
-
         background-color: #fff;
         background-clip: border-box;
         border: 1px solid #e3e6f0;
         border-radius: 0.35rem;
-
-        
-
+        body.dark & {
+            background: #222222;
+            box-shadow: 10px 10px 20px rgba(0,0,0,.16);
+        }
         .cardHeader{
             margin-bottom: 0;
             background-color: #f8f9fc;
@@ -51,10 +51,22 @@
             .cardHeaderText{
                 color: #4e73df;
             }
+            body.dark & {
+                background: #222222;
+                box-shadow: 10px 10px 20px rgba(0,0,0,.16);
+            }
         }
         .cardExpand{
             padding: 0.75rem 1.25rem 0.75rem 1.25rem;
             
+            body.dark &{
+                h6 p{
+                    color: #C8C8C8;
+                    &:hover {
+                        color: #FEFEFE;
+                    }
+                }
+            }
             .btnCarleon{
                 color: #fff;
                 background-color: #858796;
@@ -85,59 +97,75 @@
                 background-color: #611BBD;
                 border-color: #130269;
             }
+            .infoMaterial{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                align-items: center;
+                justify-content: space-between;
+                img{
+                    width: 20%;
+                }
+                .nombreMaterial{
+                    color: #000000;
+                    width: 300px;
+                    body.dark & {
+                        color: #fff;
+                    }        
+                }
+                .numInfo{
+                    padding: 5px 10px ;
+                    color: white;
+                    background-color: #5ac4eb;
+                    border-radius: 5px;
+                }
+                input{
+                    width: 150px;
+                    body.dark &{
+                        background-color: #C8C8C8;
+                    }
+                    
+                }
+            }
         }
     }
-}
-
-.infoMaterial{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    justify-content: space-between;
-    img{
-        width: 20%;
-    }
-    .nombreMaterial{
-        color: #000000;
-        width: 300px;
-    }
-    .numInfo{
-        padding: 5px 10px ;
-        color: white;
-        background-color: #5ac4eb;
-        border-radius: 5px;
-    }
-    input{
-        width: 150px;
-    }
-}
-
-.custom{
-    .customData{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-
-        .inputCustom{
-            margin-left: 50px;
-            width: 150px;
-            height: 40px;
+    .custom{
+        .customData{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            .inputCustom{
+                margin-left: 50px;
+                width: 150px;
+                height: 40px;
+                body.dark &{
+                    background-color: #C8C8C8;
+                }
+            }
+            span{
+                height: 40px;
+                width: 40px;
+                body.dark &{
+                    background-color: #ACABAB;
+                }
+            }
         }
-        span{
-            height: 40px;
-            width: 40px;
-        }
+        
     }
     
 }
+
+
 
 table.tabla {
     background-color: #EEEEEE;
     width: 100%;
     text-align: left;
     border-collapse: collapse;
+    body.dark &{
+        background-color: #222222;
+    }
 }
 table.tabla td, table.tabla th {
     padding: 1px 1px;
@@ -174,24 +202,24 @@ table.tabla tfoot .links a{
 }
 table.tabla tr:nth-child(even) {
     background: #ffffff;
+    body.dark &{
+        background-color: #111111;
+    }
 }
-
 table.tabla tfoot {
     background: #ffffff;
+    body.dark &{
+        background-color: #222222;
+    }
 }
-
-
 .tChico{
     font-weight: 300;
     font-size: smaller;
 }
-
 .tierImg{
     width: 20%;
     height: 20%;
 }
-
-
 .city { grid-area: city; }
 
 .tier { grid-area: tier; }
@@ -203,3 +231,6 @@ table.tabla tfoot {
 .custom { grid-area: custom; }
 
 .price { grid-area: price; }
+.btn{
+    margin: 0;
+}

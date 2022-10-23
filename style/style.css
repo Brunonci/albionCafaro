@@ -8,6 +8,14 @@ body {
   background-color: #A8D8EA;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
+  transition: 0.3s ease all;
+}
+body.dark {
+  background: #111111;
+  color: #C8C8C8;
+}
+body.dark:hover {
+  color: #FEFEFE;
 }
 
 .linea {
@@ -26,6 +34,46 @@ h6 {
   margin: 0;
 }
 
+.tema {
+  background: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none;
+}
+.tema::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.tema.active {
+  background: orange;
+  color: #000;
+}
+.tema.active::after {
+  right: 0;
+  left: unset;
+}
+.tema span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
 header {
   background-color: #AA96DA;
   position: -webkit-sticky;
@@ -37,6 +85,16 @@ header {
 header nav {
   padding-left: 0;
   margin-bottom: 0;
+}
+body.dark header nav {
+  background: #222222;
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
+body.dark header nav a {
+  color: #C8C8C8;
+}
+body.dark header nav a:hover {
+  color: #FEFEFE;
 }
 header nav ul {
   margin: 0;
@@ -73,6 +131,16 @@ footer {
   bottom: 0;
   background-color: #AA96DA;
   text-align: center;
+}
+body.dark footer {
+  background: #222222;
+  box-shadow: 10px 10px 20px rgba(170, 170, 170, 0.16);
+}
+body.dark footer a {
+  color: #C8C8C8;
+}
+body.dark footer a:hover {
+  color: #FEFEFE;
 }
 footer h3 {
   font-size: smaller;
@@ -126,6 +194,10 @@ footer .iconFooter img {
   border: 1px solid #e3e6f0;
   border-radius: 0.35rem;
 }
+body.dark .craft .card {
+  background: #222222;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+}
 .craft .card .cardHeader {
   margin-bottom: 0;
   background-color: #f8f9fc;
@@ -136,8 +208,18 @@ footer .iconFooter img {
 .craft .card .cardHeader .cardHeaderText {
   color: #4e73df;
 }
+body.dark .craft .card .cardHeader {
+  background: #222222;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+}
 .craft .card .cardExpand {
   padding: 0.75rem 1.25rem 0.75rem 1.25rem;
+}
+body.dark .craft .card .cardExpand h6 p {
+  color: #C8C8C8;
+}
+body.dark .craft .card .cardExpand h6 p:hover {
+  color: #FEFEFE;
 }
 .craft .card .cardExpand .btnCarleon {
   color: #fff;
@@ -169,45 +251,55 @@ footer .iconFooter img {
   background-color: #611BBD;
   border-color: #130269;
 }
-
-.infoMaterial {
+.craft .card .cardExpand .infoMaterial {
   display: flex;
   flex-direction: row;
   gap: 20px;
   align-items: center;
   justify-content: space-between;
 }
-.infoMaterial img {
+.craft .card .cardExpand .infoMaterial img {
   width: 20%;
 }
-.infoMaterial .nombreMaterial {
+.craft .card .cardExpand .infoMaterial .nombreMaterial {
   color: #000000;
   width: 300px;
 }
-.infoMaterial .numInfo {
+body.dark .craft .card .cardExpand .infoMaterial .nombreMaterial {
+  color: #fff;
+}
+.craft .card .cardExpand .infoMaterial .numInfo {
   padding: 5px 10px;
   color: white;
   background-color: #5ac4eb;
   border-radius: 5px;
 }
-.infoMaterial input {
+.craft .card .cardExpand .infoMaterial input {
   width: 150px;
 }
-
-.custom .customData {
+body.dark .craft .card .cardExpand .infoMaterial input {
+  background-color: #C8C8C8;
+}
+.craft .custom .customData {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
 }
-.custom .customData .inputCustom {
+.craft .custom .customData .inputCustom {
   margin-left: 50px;
   width: 150px;
   height: 40px;
 }
-.custom .customData span {
+body.dark .craft .custom .customData .inputCustom {
+  background-color: #C8C8C8;
+}
+.craft .custom .customData span {
   height: 40px;
   width: 40px;
+}
+body.dark .craft .custom .customData span {
+  background-color: #ACABAB;
 }
 
 table.tabla {
@@ -215,6 +307,9 @@ table.tabla {
   width: 100%;
   text-align: left;
   border-collapse: collapse;
+}
+body.dark table.tabla {
+  background-color: #222222;
 }
 
 table.tabla td, table.tabla th {
@@ -260,9 +355,15 @@ table.tabla tfoot .links a {
 table.tabla tr:nth-child(even) {
   background: #ffffff;
 }
+body.dark table.tabla tr:nth-child(even) {
+  background-color: #111111;
+}
 
 table.tabla tfoot {
   background: #ffffff;
+}
+body.dark table.tabla tfoot {
+  background-color: #222222;
 }
 
 .tChico {
@@ -297,6 +398,10 @@ table.tabla tfoot {
 
 .price {
   grid-area: price;
+}
+
+.btn {
+  margin: 0;
 }
 
 .selecionRefinator {

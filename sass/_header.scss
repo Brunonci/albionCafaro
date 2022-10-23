@@ -7,6 +7,16 @@ header{
     nav{
         padding-left: 0;
         margin-bottom: 0;
+        body.dark & {
+            background: #222222;
+            box-shadow: 10px 10px 20px rgba(170,170,170,.16);
+            a {
+                color: #C8C8C8;
+                &:hover {
+                    color: #FEFEFE;
+                }
+            }
+        }
         ul{
             margin: 0;
             li{
