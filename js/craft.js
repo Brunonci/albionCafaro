@@ -185,32 +185,32 @@ function precioTotal(){
     let cant = parseInt(document.getElementById("cantItem").innerText, 10);
     let precio = parseInt(document.getElementById("precioItem").value, 10);
     let total = cant * precio 
-    document.getElementById("precioTotalItem").innerHTML = total;
+    document.getElementById("precioTotalItem").innerHTML = total.toFixed(0);
 }
 function precioTotalM1(){
     let cant1 = parseInt(document.getElementById("cantMaterial1").innerText, 10);
     let precio1 = parseInt(document.getElementById("precioMaterial1").value, 10);
     let total1 = cant1 * precio1 
-    document.getElementById("precioTotalMaterial1").innerHTML = total1;
+    document.getElementById("precioTotalMaterial1").innerHTML = total1.toFixed(0);
 }
 function precioTotalM2(){
     let cant2 = parseInt(document.getElementById("cantMaterial2").innerText, 10);
     let precio2 = parseInt(document.getElementById("precioMaterial2").value, 10);
     let total2 = cant2 * precio2 
-    document.getElementById("precioTotalMaterial2").innerHTML = total2;
+    document.getElementById("precioTotalMaterial2").innerHTML = total2.toFixed(0);
 }
 function customTarifa(){
     let tarifa = parseInt(document.getElementById("inputTarifa").value, 10);
     let tarifaTotal = (tarifa / 100) * 2400
-    document.getElementById("tarifaUso").innerHTML = tarifaTotal;
-    document.getElementById("tarifaUso1").innerHTML = tarifaTotal;
+    document.getElementById("tarifaUso").innerHTML = tarifaTotal.toFixed(0);
+    document.getElementById("tarifaUso1").innerHTML = tarifaTotal.toFixed(0);
 }
 function costoMateriales(){
     let total1 = parseInt(document.getElementById("precioTotalMaterial1").innerText, 10);
     let total2 = parseInt(document.getElementById("precioTotalMaterial2").innerText, 10);
     let total = total1 + total2
-    document.getElementById("costoMateriales").innerHTML = total;
-    document.getElementById("costoMateriales1").innerHTML = total;
+    document.getElementById("costoMateriales").innerHTML = total.toFixed(0);
+    document.getElementById("costoMateriales1").innerHTML = total.toFixed(0);
 }
 function retornoMateriales(){
     //sin foco
@@ -243,42 +243,30 @@ function retornoMateriales(){
 
 
 function costoTotal(){
-    let precioItem = parseInt(document.getElementById("precioItem").value, 10);
+    let precioTotalItem = parseInt(document.getElementById("precioTotalItem").innerText, 10);
     let costoMateriales = parseInt(document.getElementById("costoMateriales").innerText, 10);
     let retornoSinFocoTotal = parseInt(document.getElementById("retornoSinFocoTotal").innerText, 10);
     let retornoConFocoTotal = parseInt(document.getElementById("retornoConFocoTotal").innerText, 10);
     let tarifaUso = parseInt(document.getElementById("tarifaUso").innerText, 10);
     let tarifaUso1 = parseInt(document.getElementById("tarifaUso1").innerText, 10);
-
     let costoTotalSinFoco = tarifaUso + costoMateriales - retornoSinFocoTotal
     let costoTotalConFoco = tarifaUso1 + costoMateriales - retornoConFocoTotal
-
-
-
     document.getElementById("finalTotalSinFoco").innerHTML = costoTotalSinFoco.toFixed(0);
     document.getElementById("finalTotalConFoco").innerHTML = costoTotalConFoco.toFixed(0);
-
-
-    console.log=(costoTotalSinFoco)
-    console.log=(precioItem)
-
-    if(costoTotalSinFoco < precioItem){
+    if(costoTotalSinFoco < precioTotalItem){
         const finalTotalSinFoco = document.getElementById("finalTotalSinFoco");
         finalTotalSinFoco.setAttribute("class", "btn btn-success mt-4");
     }else{
         const finalTotalSinFoco = document.getElementById("finalTotalSinFoco");
         finalTotalSinFoco.setAttribute("class", "btn btn-danger mt-4");
     }
-
-    if(costoTotalConFoco < precioItem){
+    if(costoTotalConFoco < precioTotalItem){
         const finalTotalConFoco = document.getElementById("finalTotalConFoco");
         finalTotalConFoco.setAttribute("class", "btn btn-success mt-4");
     }else{
         const finalTotalConFoco = document.getElementById("finalTotalConFoco");
         finalTotalConFoco.setAttribute("class", "btn btn-danger mt-4");
     }
-
-
 }
 
 
