@@ -181,6 +181,9 @@ function refinatorBtnThetford() {
 }
 
 
+
+
+
 function precioTotal(){
     let cant = parseInt(document.getElementById("cantItem").innerText, 10);
     let precio = parseInt(document.getElementById("precioItem").value, 10);
@@ -270,33 +273,25 @@ function costoTotal(){
 }
 
 
+const pocionVeneno = [
+    {nombre: "Poción de veneno menor", tier: "T4", precioaprox: 700, materiales: ["Bardana almenada", "Consuelda hojabrillante"], cantidadMaterial: [8, 4]},
+    {nombre: "Poción de veneno", tier: "T6", precioaprox: 3500, materiales: ["Dedalera elusiva", "Cardo de dragón", "Consuelda hojabrillante", "Leche de oveja"], cantidadMaterial: [24, 12, 12, 6]},
+    {nombre: "Poción de veneno mayor", tier: "T8", precioaprox: 12000, materiales: ["Milenrama demoníaca", "Gordolobo de fuego", "Cardo de dragón", "Leche de vaca", "Aguardiente de calabaza"], cantidadMaterial: [72, 36, 36, 18, 18]}
+];
+
+const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
+guardarLocal("listaPociones", JSON.stringify(pocionVeneno));
+
+
+
+
+
 /*
-function TotalSummaryFocus(newPrice, TotalSum_MatReturnedFocus) {
-    var UFTFormattedFocus = document.getElementsByClassName("UsageFeeTotal")[1]
-        .innerHTML;
-    var UsageFeeTotalFocus = UFTFormattedFocus.replace(",", "");
+const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
+guardarLocal("pocionVeneno", JSON.stringify(pocionVeneno));
 
-    document.getElementById("allTotalwFocus").innerHTML = nf.format(
-        parseInt(+UsageFeeTotalFocus + +newPrice - +TotalSum_MatReturnedFocus)
-    );
 
-    var TotalSumFocus = parseInt(
-        +UsageFeeTotalFocus + +newPrice - +TotalSum_MatReturnedFocus
-    );
-    var itemToCraft = document
-        .getElementById("itemprice")
-        .getAttribute("data-itemprice");
-    var itemVsMat = PercDiff(itemToCraft, TotalSumFocus);
-    if (itemVsMat < 0) {
-        var ProfitwFocusClass = "danger";
-    } else if (itemVsMat < 10) {
-        var ProfitwFocusClass = "warning";
-    } else if (itemVsMat > 10) {
-        var ProfitwFocusClass = "success";
-    }
+const venenoT4 = JSON.parse(pocionVeneno[0])
+console.log(venenoT4.nombre)
 
-    document
-        .getElementById("allTotalwFocus")
-        .setAttribute("class", "btn btn-" + ProfitwFocusClass + " mt-4");
-}
 */
