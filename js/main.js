@@ -18,7 +18,6 @@ if(localStorage.getItem('dark-mode') === 'true'){
 
 const btn = document.getElementById('alertDescarga')
 btn.addEventListener('click', () => {
-
     Swal.fire({
 		title: '<strong><u>Juega Albion Online Gratis</u></strong>',
 		icon: 'info',

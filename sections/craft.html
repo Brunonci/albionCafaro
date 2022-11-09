@@ -15,7 +15,6 @@
     <meta name="copyrigth" content="">
     <meta name="description" content="Este sitio es una Fan Page del videojuego -Albion Online-">
     <meta name="keywords" content="Videojuegos, Albion Online, MMO, Craft, Tools">
-
 </head>
 
 <body>
@@ -34,7 +33,10 @@
                     </ul>
                 </div>
                 <div class="derechaHeader">
-                    <div id="clima"><h6 id="ubi">Argentina</h6><h6 id="temp">24 C°</h6></div>
+                    <div class="clima">
+                        <h6 id="ubi">
+                        </h6><h6 id="temp"></h6>
+                    </div>
                     <button class="tema" id="tema">
                         <span><i class="fas fa-sun"></i></span>
                         <span><i class="fas fa-moon"></i></span>
@@ -44,22 +46,11 @@
         </nav>
     </header>
 
-
-
     <div class="selecionCraft">
         <h1>Crafteo</h1>
         <p>Seleciona el item a craftear: </p>
-        <div class="items">
-            <a href="" id="" onclick=""><img src="" alt=""></a>
-            <a href="" id="" onclick=""><img src="" alt=""></a>
-            <a href="" id="" onclick=""><img src="" alt=""></a>
-            <a href="" id="" onclick=""><img src="" alt=""></a>
-            <a href="" id="" onclick=""><img src="" alt=""></a>
-        </div>
     </div>
-
     <div class="linea"></div>
-
     <div class="craft">
         <div class="card city">
             <div class="cardHeader" type="button" onclick="cardExpand1Display()" >
@@ -89,7 +80,6 @@
                 
             </div>
         </div>
-
         <div class="card material">
             <div class="cardHeader" type="button" onclick="cardExpand3Display()">
                 <h6 class="cardHeaderText">Materiales y costo: </h6>
@@ -115,7 +105,6 @@
                 
             </div>
         </div>
-
         <div class="card custom">
             <div class="cardHeader" type="button" onclick="cardExpand4Display()">
                 <h6 class="cardHeaderText">Customización:</h6>
@@ -145,7 +134,6 @@
                 </div>
             </div>
         </div>
-
         <div class="card tier">
             <div class="cardHeader" type="button" onclick="cardExpand5Display()" >
                 <h6 class="cardHeaderText">Selecionar Tier: <span class="selecionCuidad"></span></h6>
@@ -156,7 +144,6 @@
                 <a onclick="potionT8()" ><img src="../images/craft/potion/veneno/T8_POTION_COOLDOWN.png" alt="" class="tierImg"></a>
             </div>
         </div>
-
         <div class="card price">
             <div class="cardHeader" type="button" onclick="cardExpand6Display()" >
                 <h6 class="cardHeaderText">Precio final: <span class="selecionCuidad"></span></h6>
@@ -199,10 +186,8 @@
         </div>
     </div>
 
-    <!-- pie de pagina -->
     <footer id="footer">
         <h3>© Copyright 2022 - Albion Online Tools</h3>
-        <!--Iconos-->
         <div class="iconFooter">
             <img src="../images/footer/icons8-facebook-50.png" alt="Icono de facebook">
             <img src="../images/footer/icons8-linkedin-50.png" alt="Icono de linkedin">

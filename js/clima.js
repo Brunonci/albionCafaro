@@ -1,4 +1,3 @@
-
 async function localizacion(){
     const options = {
         method: 'GET',
