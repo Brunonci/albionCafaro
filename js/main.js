@@ -1,48 +1,8 @@
-/*
-let nombreDeUsuario;
-let contraseña;
-let contador = 0;
-let item1 = 0;
-let item2 = 0;
-let tax = 0;
-let retorno = 0;
-let costo = 0;
-
-function registrarUsuario() {
-    nombreDeUsuario = prompt("Ingrese un nombre usuario para registrarse");
-    contraseña = prompt("Ingrese una contraseña para registrarse");
-}
-
-function loguearse() {
-    let logUser = prompt("Introduzca su usuario para loguearse");
-    let logContraseña = prompt("Introduzca su contraseña para loguearse");
-
-    if (logUser === nombreDeUsuario && logContraseña === contraseña) {
-        alert("Bienvenido " + nombreDeUsuario + " Ya pudes usar la calculadora");
-    } else {
-        alert("Nombre o contraseña incorrectos, intentelo nuevamente");
-        contador++;
-        if (contador === 2) {
-            alert("Agotaste los intentos, vuelve a recargar la pagina");
-        } else {
-            loguearse();
-        }
-    }
-}
-
-registrarUsuario();
-loguearse();
-*/
-
-
-
-
+//switch por localstorage
 const btnSwitch = document.querySelector('#tema');
-
 btnSwitch.addEventListener('click', () => {
 	document.body.classList.toggle('dark');
 	btnSwitch.classList.toggle('active');
-
 	// Guardamos el modo en localstorage.
 	if(document.body.classList.contains('dark')){
 		localStorage.setItem('dark-mode', 'true');
@@ -50,7 +10,6 @@ btnSwitch.addEventListener('click', () => {
 		localStorage.setItem('dark-mode', 'false');
 	}
 });
-
 // Obtenemos el modo actual.
 if(localStorage.getItem('dark-mode') === 'true'){
 	document.body.classList.add('dark');
@@ -59,3 +18,27 @@ if(localStorage.getItem('dark-mode') === 'true'){
 	document.body.classList.remove('dark');
 	btnSwitch.classList.remove('active');
 }
+
+
+const btn = document.getElementById('alertDescarga')
+btn.addEventListener('click', () => {
+
+    Swal.fire({
+		title: '<strong><u>Juega Albion Online Gratis</u></strong>',
+		icon: 'info',
+		html:
+		'<a href="https://albiononline.com/es/download">PC</a> ' +
+		'<a href="https://apps.apple.com/es/app/id1202788573">IOS</a> ' +
+		'<a href="https://play.google.com/store/apps/details?id=com.albiononline&pli=1">ANDROID</a> ',
+		showCloseButton: true,
+		showCancelButton: true,
+		focusConfirm: false,
+		confirmButtonText:
+		'<i class="fa fa-thumbs-up"></i> Great!',
+		confirmButtonAriaLabel: 'Thumbs up, great!',
+		cancelButtonText:
+		'<i class="fa fa-thumbs-down"></i>',
+		cancelButtonAriaLabel: 'Thumbs down'
+	})
+})
+

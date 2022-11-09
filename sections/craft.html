@@ -30,7 +30,6 @@
                     <ul>
                         <li><a href="../index.html">Inicio</a></li>
                         <li><a href="./craft.html">Crafteo</a></li>
-                        <li><a href="./refinador.html">Refinador</a></li>
                         <li><a href="./galeria.html">Galeria</a></li>
                     </ul>
                     <button class="tema" id="tema">
@@ -78,7 +77,7 @@
             </div>
             <div class="cardExpand" id="cardExpand2">
                 <div class="infoMaterial">
-                    <img src="../images/craft/potion/veneno/T4_POTION_COOLDOWN.png" alt="">
+                    <img id="imgitem" src="../images/craft/potion/veneno/T4_POTION_COOLDOWN.png" alt="">
                     <p id="cantItem" class="numInfo">5</p>
                     <h6 id="nombreItem" class="nombreMaterial">Poción de veneno menor</h6>
                     <input id="precioItem" class="form-control" value="700" type="number" oninput="precioTotal(), costoTotal()">
@@ -93,21 +92,24 @@
                 <h6 class="cardHeaderText">Materiales y costo: </h6>
             </div>
             <div class="cardExpand" id="cardExpand3">
-                <div class="infoMaterial">
-                    <img src="../images/craft/productos/T4_BURDOCK.png" alt="">
-                    <p id="cantMaterial1" class="numInfo">8</p>
-                    <h6 id="nombreMaterial1" class="nombreMaterial">Bardana almenada</h6>
-                    <input id="precioMaterial1" class="form-control" value="390" type="number" oninput="precioTotalM1(), costoMateriales(), costoTotal()">
-                    <p id="precioTotalMaterial1">3120</p>
+                <div id="cambio">
+                    <div class="infoMaterial">
+                        <img src="../images/craft/productos/T4_BURDOCK.png" alt="">
+                        <p id="cantMaterial1" class="numInfo">8</p>
+                        <h6 id="nombreMaterial1" class="nombreMaterial">Bardana almenada</h6>
+                        <input id="precioMaterial1" class="form-control" value="390" type="number" oninput="precioTotalM1(), costoMateriales(), costoTotal()">
+                        <p id="precioTotalMaterial1">3120</p>
+                    </div>
+                    <div class="linea"></div>
+                    <div class="infoMaterial">
+                        <img src="../images/craft/productos/T3_COMFREY.png" alt="">
+                        <p id="cantMaterial2" class="numInfo">4</p>
+                        <h6 id="nombreMaterial2" class="nombreMaterial">Consuelda hojabrillante</h6>
+                        <input id="precioMaterial2" class="form-control" value="350" type="number" oninput="precioTotalM2(), costoMateriales(), costoTotal()">
+                        <p id="precioTotalMaterial2">1400</p>
+                    </div>
                 </div>
-                <div class="linea"></div>
-                <div class="infoMaterial">
-                    <img src="../images/craft/productos/T3_COMFREY.png" alt="">
-                    <p id="cantMaterial2" class="numInfo">4</p>
-                    <h6 id="nombreMaterial2" class="nombreMaterial">Consuelda hojabrillante</h6>
-                    <input id="precioMaterial2" class="form-control" value="350" type="number" oninput="precioTotalM2(), costoMateriales(), costoTotal()">
-                    <p id="precioTotalMaterial2">1400</p>
-                </div>
+                
             </div>
         </div>
 
@@ -146,9 +148,9 @@
                 <h6 class="cardHeaderText">Selecionar Tier: <span class="selecionCuidad"></span></h6>
             </div>
             <div class="cardExpand" id="cardExpand5">
-                <a onclick="potionT4()"><img src="../images/craft/potion/veneno/T4_POTION_COOLDOWN.png" alt="" class="tierImg"></a>
-                <a onclick="potionT6()"><img src="../images/craft/potion/veneno/T6_POTION_COOLDOWN.png" alt="" class="tierImg"></a>
-                <a onclick="potionT8()"><img src="../images/craft/potion/veneno/T8_POTION_COOLDOWN.png" alt="" class="tierImg"></a>
+                <a onclick="potionT4()" ><img src="../images/craft/potion/veneno/T4_POTION_COOLDOWN.png" alt="" class="tierImg"></a>
+                <a onclick="potionT6()" ><img src="../images/craft/potion/veneno/T6_POTION_COOLDOWN.png" alt="" class="tierImg"></a>
+                <a onclick="potionT8()" ><img src="../images/craft/potion/veneno/T8_POTION_COOLDOWN.png" alt="" class="tierImg"></a>
             </div>
         </div>
 
@@ -184,7 +186,7 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td><p class="btn btn-secondary mt-4">Costo total x item</p></td>
+                            <td><p class="btn btn-secondary mt-4">Costo total</p></td>
                             <td><p class="btn btn-danger mt-4" id="finalTotalSinFoco">4442</p></td>
                             <td><p class="btn btn-success mt-4" id="finalTotalConFoco">3251</p></td>
                         </tr>
